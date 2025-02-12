@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Pet Shop</title>
+	<link rel="stylesheet" href="w3.css">
+</head>
+
+<body>
+	<script src="webPack.js"></script>
+	<script src="index.js"></script>
+
+	<div class="w3-bar w3-black">
+		<button class="w3-bar-item w3-button" onclick="openTab('signup')">Sign-up</button>
+		<button class="w3-bar-item w3-button" onclick="openTab('signin')">Sign-in</button>
+		<button class="w3-bar-item w3-button" onclick="openTab('managemfa')">Manage MFA</button>
+		<button class="w3-bar-item w3-button" onclick="openTab('callapis')">Call APIs</button>
+		<button class="w3-bar-item w3-button" onclick="openTab('accesss3')">Access S3</button>
+	</div>
+
+	<div id="signup" class="w3-container w3-padding-large w3-grey tab">
+		<div class="w3-section">
+			<label>Name</label>
+			<input class="w3-input w3-border" type="text" id="signup_name" required>
+		</div>
+		<div class="w3-section">
+			<label>Username</label>
+			<input class="w3-input w3-border" type="text" id="signup_username" required>
+		</div>
+		<div class="w3-section">
+			<label>Email</label>
+			<input class="w3-input w3-border" type="text" id="signup_email" required>
+		</div>
+		<div class="w3-section">
+			<label>Phone</label>
+			<input class="w3-input w3-border" type="text" id="signup_phone" required>
+		</div>
+		<div class="w3-section">
+			<label>Password</label>
+			<input class="w3-input w3-border" type="password" id="signup_password" required>
+		</div>
+		<button type="submit" class="w3-button w3-black w3-margin-bottom" onclick="signUp()">Sign Up</button>
+	</div>
+
+
+	<div id="signin" class="w3-container w3-padding-large w3-grey tab" style="display:none">
+		<div class="w3-section">
+			<label>Username</label>
+			<input class="w3-input w3-border" type="text" id="signin_username" required value="jhmarkstst+new@outlook.com">
+		</div>
+		<div class="w3-section">
+			<label>Password</label>
+			<input class="w3-input w3-border" type="password" id="signin_password" required>
+		</div>
+		<button type="submit" class="w3-button w3-black w3-margin-bottom" onclick="signIn()">Sign In</button>
+		<button type="submit" class="w3-button w3-black w3-margin-bottom" onclick="signOut()">Sign Out</button>
+		<div class="w3-section" id="tokens">
+			<pre class="" id="idToken"></pre>
+			<pre class="" id="accessToken"></pre>
+		</div>
+	</div>
+
+
+	<div id="managemfa" class="w3-container w3-padding-large w3-grey tab" style="display:none">
+		<button type="submit" class="w3-button w3-black w3-margin-bottom" onclick="enableMFA()">Enable MFA</button>
+		<button type="submit" class="w3-button w3-black w3-margin-bottom" onclick="disableMFA()">Disable MFA</button>
+		<div id="qrcode"></div>
+		<button type="submit" class="w3-button w3-black w3-margin-bottom" onclick="continueMFA()">Verify</button>
+	</div>
+
+
+	<div id="callapis" class="w3-container w3-padding-large w3-grey tab" style="display:none">
+		<button type="submit" class="w3-button w3-black w3-margin-bottom" onclick="callAPIGW()">Call APIGW</button>
+		<div class="w3-section">
+			<pre class="" id="apiresponse"></pre>
+		</div>
+	</div>
+
+
+</body>
+
+</html>
