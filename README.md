@@ -46,6 +46,9 @@ Successful Extra Efforts:
 	- Creating a new Authorizer,
 	- Changing the Resources GET method to use the new Authorizer, and
 	- Re-deploying the API.
+- Manually created the /dist folder and added files.
+- Deployed to AWS Amplify using an amplify.yaml like the bopenui5walkthrough app.
+	- Succusfully ran on the hosted sight just like the local site.
 
 Future Learings:
 - Build the webPack.js based on AWS documentation for the app's required AWS SDK 
